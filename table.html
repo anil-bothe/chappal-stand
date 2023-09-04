@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chappter Numbers</title>
     <style>
         * {
             box-sizing: border-box;
@@ -44,77 +44,9 @@
 </head>
 
 <body>
-    <table id="table">
+    <table id="table"></table>
 
-    </table>
-    <script>
-        var range = {
-            1: [1, 12],
-            2: [97, 108],
-            3: [193, 204],
-            4: [289, 300],
-            5: [385, 396],
-            6: [481, 492],
-            7: [577, 589],
-            8: [673, 684],
-            9: [865, 876],
-            10: [961, 972],
-            11: [1057, 1068],
-            12: [1153, 1164],
-        }
-        
-        function myFunc(arr) {
-            var table = document.getElementById("table");
-            let counter = 0
-            for (n1 = arr[0]; n1 <= arr[1]; n1++) { // row
-                counter += 1
-                let x = [n1]
-                t = n1
-                for (n2 = 1; n2 <= 8; n2++) { // column
-                    t += 12
-                    x.push(t)
-                }
-
-                var _html = `
-                <tr>
-                    <td>
-                        <div>
-                            <span>${x[0]}</span>
-                            <span>${x[1]}</span>
-                        </div>
-                    </td>
-                <td>
-                        <div>
-                            <span>${x[2]}</span>
-                            <span>${x[3]}</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>${x[4]}</span>
-                            <span>${x[5]}</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>${x[6]}</span>
-                            <span>${x[7]}</span>
-                        </div>
-                    </td>
-                </tr>`
-
-                table.innerHTML += _html;
-            }
-            console.log("counter:", counter)
-        }
-        let url = new URL(window.location.href);
-        let pageId = url.searchParams.get('page')
-        console.log(pageId)
-        if (pageId != "" || pageId != undefined){
-        
-            myFunc(range[Number(pageId)])
-        }
-    </script>
+    <script src="myapp.js"></script>
 </body>
 
 </html>
