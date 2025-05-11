@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chappter Numbers</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            margin: 0;
+            margin-top: 0;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 4.8cm;
+            /*height: 2.436cm;*/
+            height: 2.1cm;
+            border: .4cm solid rgb(255, 249, 249);
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td div {
+            display: flex;
+            justify-content: space-around;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+            margin-top: 2px;
+            padding: 0;
+        }
+
+        @media print {}
+    </style>
+</head>
+
+<body>
+    <table id="table"></table>
+
+    <script src="myapp-v1.js"></script>
+</body>
+
+</html>

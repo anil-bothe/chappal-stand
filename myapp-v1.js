@@ -1,12 +1,14 @@
 function myFunc(arr) {
     var table = document.getElementById("table");
-    let counter = 0
+    let counter = 0;
+    let rowSize = 14;
+    let colSize = 5;
     for (n1 = arr[0]; n1 <= arr[1]; n1++) { // row
         counter += 1
         let x = [n1]
         t = n1
-        for (n2 = 1; n2 <= 8; n2++) { // column
-            t += 12
+        for (n2 = 1; n2 <= colSize; n2++) { // column
+            t += rowSize
             x.push(t)
         }
 
@@ -15,25 +17,26 @@ function myFunc(arr) {
             <td>
                 <div>
                     <span>${x[0]}</span>
+                </div>
+            </td>
+            <td>
+                <div>
                     <span>${x[1]}</span>
                 </div>
             </td>
             <td>
                 <div>
                     <span>${x[2]}</span>
+                </div>
+            </td>
+            <td>
+                <div>
                     <span>${x[3]}</span>
                 </div>
             </td>
             <td>
                 <div>
                     <span>${x[4]}</span>
-                    <span>${x[5]}</span>
-                </div>
-            </td>
-            <td>
-                <div>
-                    <span>${x[6]}</span>
-                    <span>${x[7]}</span>
                 </div>
             </td>
         </tr>`
@@ -46,10 +49,10 @@ function myFunc(arr) {
 
 let url = new URL(window.location.href);
 let pageId = url.searchParams.get('page')
-console.log({pageId})
 
 if (pageId != "" || pageId != undefined){
     var range = generateNumbersUsingPageId(pageId);
+    console.log('Range:', {range})
     myFunc(range[Number(pageId)])
 }
 
@@ -57,9 +60,9 @@ function generateNumbersUsingPageId(pageId){
     // Single page has 48 stickers
     // We are printing two number on single sticker
     // Hence 96 numbers per page 
-    const numberSize = 96;
+    const numberSize = 70;
     const totalNumber = Number(pageId) * numberSize;
-    const inclusiveColumnSize = 11
+    const inclusiveColumnSize = 13
 
     let range = new Object();
     let counter = 0;

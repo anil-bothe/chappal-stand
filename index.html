@@ -20,7 +20,7 @@
               Please select page number range according to your requirement.
             </div>
             <div class="d-flex gap-2 justify-content-center">
-                <select name="" class="form-control" id="pageId" style="width: 250px;">
+                <!-- <select name="" class="form-control" id="pageId" style="width: 250px;">
                     <option value="">Select Number Range</option>
                     <option value="1">Range (1 - 96)</option>
                     <option value="2">Range (97 - 192)</option>
@@ -33,6 +33,20 @@
                     <option value="9">Range (769 - 864)</option>
                     <option value="10">Range (865 - 960)</option>
                     <option value="11">Range (961 - 1056)</option>
+                </select> -->
+                <select name="" class="form-control" id="pageId" style="width: 250px;">
+                    <option value="">Select Number Range</option>
+                    <option value="1">Range (1 - 70)</option>
+                    <option value="2">Range (71 - 140)</option>
+                    <option value="3">Range (141 - 210)</option>
+                    <option value="4">Range (211 - 280)</option>
+                    <option value="5">Range (281 - 350)</option>
+                    <option value="6">Range (351 - 420)</option>
+                    <option value="7">Range (421 - 490)</option>
+                    <option value="8">Range (491 - 560)</option>
+                    <option value="9">Range (561 - 630)</option>
+                    <option value="10">Range (631 - 700)</option>
+                    <option value="11">Range (701 - 770)</option>
                 </select>
                 <button class="btn btn-primary">Go to page</button>
             </div>
@@ -49,7 +63,7 @@
         document.querySelector("button").addEventListener("click", function(){
             let val = pageId.value;
             if (val != ""){
-                window.location.href = "table.html?page=" + val;
+                window.location.href = "table-v1.html?page=" + val;
             } else {
                 alert("Please select page !!")
             }
