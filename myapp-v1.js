@@ -62,7 +62,7 @@ function generateNumbersUsingPageId(pageId){
     // Hence 96 numbers per page 
     const numberSize = 70;
     const totalNumber = Number(pageId) * numberSize;
-    const inclusiveColumnSize = 13
+    const inclusiveColumnSize = 12
 
     let range = new Object();
     let counter = 0;
