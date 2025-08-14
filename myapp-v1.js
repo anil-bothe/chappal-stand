@@ -60,7 +60,7 @@ function generateNumbersUsingPageId(pageId){
     // Single page has 48 stickers
     // We are printing two number on single sticker
     // Hence 96 numbers per page 
-    const numberSize = 70;
+    const numberSize = 65;
     const totalNumber = Number(pageId) * numberSize;
     const inclusiveColumnSize = 12
 
