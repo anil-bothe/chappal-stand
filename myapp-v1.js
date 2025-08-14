@@ -1,7 +1,7 @@
 function myFunc(arr) {
     var table = document.getElementById("table");
     let counter = 0;
-    let rowSize = 14;
+    let rowSize = 13;
     let colSize = 5;
     for (n1 = arr[0]; n1 <= arr[1]; n1++) { // row
         counter += 1
